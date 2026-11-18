@@ -1,0 +1,38 @@
+{
+  "title": "Cactus Needle",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Cactus Needle",
+        "description": "Needle normalizes local Home Assistant commands and delegates everything else to your fallback agent.",
+        "data": {
+          "url": "Server URL",
+          "fallback_agent": "Fallback conversation agent",
+          "timeout": "Request timeout"
+        }
+      },
+      "hassio_confirm": {
+        "title": "Set up {app}",
+        "description": "Connect to the Cactus Needle Home Assistant App. Choose the agent that should handle general questions.",
+        "data": {
+          "fallback_agent": "Fallback conversation agent"
+        }
+      }
+    },
+    "error": {"cannot_connect": "Unable to connect to the Cactus server"},
+    "abort": {"already_configured": "This Cactus server is already configured"}
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Cactus Needle options",
+        "data": {
+          "url": "Server URL",
+          "fallback_agent": "Fallback conversation agent",
+          "timeout": "Request timeout"
+        }
+      }
+    },
+    "error": {"cannot_connect": "Unable to connect to the Cactus server"}
+  }
+}

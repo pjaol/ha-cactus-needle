@@ -1,0 +1,8 @@
+Cactus Needle for Home Assistant
+Copyright 2026 Patrick Joal and contributors
+
+This project is distributed under the MIT License.
+
+It uses cactus-compute, which is separately distributed under the Apache
+License 2.0. Cactus model artifacts may carry additional notices or terms in
+their upstream repositories.

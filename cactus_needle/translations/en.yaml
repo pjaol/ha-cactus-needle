@@ -1,0 +1,19 @@
+configuration:
+  port:
+    name: API port
+    description: Internal HTTP API port.
+  generation:
+    name: Needle generation
+    description: Cactus Needle model generation.
+  weights:
+    name: Custom weights
+    description: Optional path to a custom .cact model.
+  telemetry:
+    name: Anonymous Cactus telemetry
+    description: Opt in to anonymous runtime usage counts. Prompts and outputs are not sent.
+  debug_logging:
+    name: Debug logging
+    description: Enable verbose service diagnostics.
+network:
+  18080/tcp: Cactus Needle HTTP API
+

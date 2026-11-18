@@ -1,0 +1,32 @@
+name: Cactus Needle
+version: "0.1.0"
+slug: cactus_needle
+description: Fast local intent routing for Home Assistant Assist
+url: https://github.com/pjaol/ha-cactus-needle
+arch:
+  - aarch64
+  - amd64
+init: false
+startup: services
+boot: auto
+watchdog: http://[HOST]:[PORT:18080]/health
+discovery:
+  - cactus_needle
+ports:
+  18080/tcp: null
+ports_description:
+  18080/tcp: Cactus Needle HTTP API
+options:
+  port: 18080
+  generation: 3
+  weights: ""
+  telemetry: false
+  debug_logging: false
+schema:
+  port: port
+  generation: int(2,3)
+  weights: str?
+  telemetry: bool
+  debug_logging: bool
+image: ghcr.io/pjaol/ha-cactus-needle
+
