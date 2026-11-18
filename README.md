@@ -56,9 +56,16 @@ persistent `/data` storage.
 
 ### Remote Cactus service
 
-Install the integration, then enter a server URL such as
-`http://192.168.1.50:18080`. A `launchd` example for macOS is included under
-[`macos/`](macos/).
+On a Mac, the included installer sets up Python, Cactus, the service, model
+cache, and per-user LaunchAgent paths:
+
+```bash
+./macos/cactus-needle.sh install
+```
+
+It also supports `update`, `status`, `restart`, and `uninstall`. See the
+[macOS installation guide](macos/README.md). Then install the Home Assistant
+integration and enter a URL such as `http://mac-mini.local:18080`.
 
 ### Manual integration install
 
