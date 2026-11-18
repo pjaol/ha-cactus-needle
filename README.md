@@ -42,19 +42,22 @@ credentials and it does not execute Home Assistant services directly.
 
 ### Home Assistant App — recommended
 
-Once this repository has a release:
+On Home Assistant OS, install the Cactus Needle integration from the Home
+Assistant Marketplace and start its setup flow. After one confirmation, the
+integration adds this App repository, installs and starts the App, waits for
+the model, and asks you to choose a fallback agent. No terminal, repository,
+host, or port setup is required.
 
-1. Add `https://github.com/pjaol/ha-cactus-needle` as a Home Assistant App
-   repository.
-2. Install and start **Cactus Needle**.
-3. Install the Cactus Needle integration from the Home Assistant Marketplace.
-4. Accept the discovered integration and choose a fallback agent.
-5. Select **Cactus Needle** as the conversation agent in an Assist pipeline.
+Finally, select **Cactus Needle** as the conversation agent in an Assist
+pipeline.
 
 The first start downloads the base Needle model. The App keeps its cache in
 persistent `/data` storage.
 
 ### Remote Cactus service
+
+Home Assistant Container/Core users, or users who want inference on a more
+powerful computer, can connect the integration to a remote service instead.
 
 On a Mac, the included installer sets up Python, Cactus, the service, model
 cache, and per-user LaunchAgent paths:

@@ -2,13 +2,38 @@
   "title": "Cactus Needle",
   "config": {
     "step": {
-      "user": {
-        "title": "Connect to Cactus Needle",
+      "manual": {
+        "title": "Connect to a Cactus Needle server",
         "description": "Needle normalizes local Home Assistant commands and delegates everything else to your fallback agent.",
         "data": {
           "url": "Server URL",
           "fallback_agent": "Fallback conversation agent",
           "timeout": "Request timeout"
+        }
+      },
+      "on_supervisor": {
+        "title": "Install Cactus Needle",
+        "description": "Home Assistant can add the Cactus Needle App repository, install the App, and keep it running. This downloads the Cactus runtime and model to this Home Assistant system. Clear the option to connect to a server on another computer instead.",
+        "data": {
+          "install_app": "Automatically install and run the Cactus Needle App"
+        }
+      },
+      "install_app": {
+        "title": "Installing Cactus Needle",
+        "description": "Home Assistant is adding the App repository, installing Cactus Needle, starting it, and waiting for the model to be ready. The first model download can take several minutes."
+      },
+      "install_failed": {
+        "title": "Cactus Needle installation failed",
+        "description": "Home Assistant could not install or start the Cactus Needle App. Retry, or clear the option to connect to a server on another computer.",
+        "data": {
+          "retry": "Retry automatic installation"
+        }
+      },
+      "app_ready": {
+        "title": "Cactus Needle is ready",
+        "description": "Choose the conversation agent that should handle general questions and requests that are not Home Assistant device commands.",
+        "data": {
+          "fallback_agent": "Fallback conversation agent"
         }
       },
       "hassio_confirm": {
@@ -19,8 +44,17 @@
         }
       }
     },
-    "error": {"cannot_connect": "Unable to connect to the Cactus server"},
-    "abort": {"already_configured": "This Cactus server is already configured"}
+    "error": {
+      "cannot_connect": "Unable to connect to the Cactus server",
+      "app_install_failed": "Unable to install or start the Cactus Needle App"
+    },
+    "abort": {
+      "already_configured": "This Cactus server is already configured",
+      "app_install_failed": "The Cactus Needle App could not be installed or started"
+    },
+    "progress": {
+      "install_app": "Installing and starting Cactus Needle"
+    }
   },
   "options": {
     "step": {
